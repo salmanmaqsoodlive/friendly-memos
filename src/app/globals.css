@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jakarta: 'Plus Jakarta Sans', system-ui;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0f0f1a;
+  color: #f0f0f0;
+  font-family: var(--font-jakarta);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff6b2b;
+  border-radius: 3px;
+}
+
+::selection {
+  background: rgba(255,107,43,0.3);
+  color: #ff9a3c;
+}
+
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.glass-orange {
+  background: rgba(255,107,43,0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,107,43,0.2);
+}
+
+.glass:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,107,43,0.3);
+}
+
+.text-orange-gradient {
+  background: linear-gradient(135deg, #ff6b2b, #ff9a3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.notification-card {
+  background: rgba(30,30,53,0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,107,43,0.2);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(ellipse at 15% 50%, rgba(255,107,43,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, rgba(255,154,60,0.05) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 90%, rgba(0,217,166,0.04) 0%, transparent 55%);
+}
+
+.pricing-card-popular {
+  background: linear-gradient(135deg, rgba(255,107,43,0.1), rgba(255,154,60,0.05));
+  border: 1px solid rgba(255,107,43,0.4);
+  box-shadow: 0 0 40px rgba(255,107,43,0.12), inset 0 1px 0 rgba(255,255,255,0.05);
+}
